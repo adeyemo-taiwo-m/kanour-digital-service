@@ -1,5 +1,4 @@
-import { HiChip, HiCode, HiCreditCard } from "react-icons/hi";
-
+import { HiChip, HiCode, HiCreditCard ,  HiLightningBolt,  HiChartBar } from "react-icons/hi";
 
 export const reasons = [
   {
@@ -82,5 +81,26 @@ export const services = [
       "Compliance automation",
       "Agency banking systems",
     ],
+  },
+];
+
+export const differences = [
+  {
+    title: "AI-first",
+    description:
+      "We don't just add AI as an afterthought. We build intelligent systems from the ground up to automate complex workflows.",
+    icon: <HiLightningBolt className="w-10 h-10 text-primary-default" />,
+  },
+  {
+    title: "Engineering-driven",
+    description:
+      "Robust, scalable, and secure code is our obsession. We build software that stands the test of time and scale.",
+    icon: <HiCode className="w-10 h-10 text-primary-default" />,
+  },
+  {
+    title: "Results-focused",
+    description:
+      "Technology is a means to an end. We focus on delivering tangible business outcomes and measurable ROI.",
+    icon: <HiChartBar className="w-10 h-10 text-primary-default" />,
   },
 ];

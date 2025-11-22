@@ -4,6 +4,7 @@ import OurVision from "../_components/about/OurVision/OurVision";
 import OurPhilosophy from "../_components/about/OurPhilosophy/OurPhilosophy";
 import OurCoreValues from "../_components/about/OurCoreValues/OurCoreValues";
 import OurLeadership from "../_components/about/OurLeadership/OurLeadership";
+import WhatMakesUsDifferent from "../_components/about/WhatMakesUsDifferent/WhatMakesUsDifferent";
 
 export default function About() {
   return (
@@ -27,6 +28,7 @@ export default function About() {
         <OurPhilosophy />
         <OurCoreValues />
         <OurLeadership />
+        <WhatMakesUsDifferent />
       </div>
     </div>
   );

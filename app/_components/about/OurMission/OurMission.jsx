@@ -15,12 +15,12 @@ export default function OurMission() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative group order-2 lg:order-1"
+            className="relative group order-2 lg:order-1 max-w-md mx-auto w-full"
           >
             {/* Decorative Elements */}
             <div className="absolute -inset-4 bg-gradient-to-l from-primary-default/20 to-primary-variant/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            <div className="relative aspect-[4/3] max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-background/50 backdrop-blur-sm flex items-center justify-center">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-background/50 backdrop-blur-sm flex items-center justify-center">
                {/* Overlay Gradient */}
                <div className="absolute inset-0 bg-gradient-to-tl from-primary-default/10 via-transparent to-transparent z-10" />
 

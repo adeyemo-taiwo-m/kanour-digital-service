@@ -58,12 +58,12 @@ export default function OurVision() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative group"
+            className="relative group max-w-md mx-auto w-full"
           >
             {/* Decorative Elements */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary-variant/20 to-primary-default/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            <div className="relative aspect-square max-w-md mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-white/5 bg-background/50 backdrop-blur-sm flex items-center justify-center">
+            <div className="relative aspect-square rounded-full overflow-hidden shadow-2xl border-4 border-white/5 bg-background/50 backdrop-blur-sm flex items-center justify-center">
                {/* Overlay Gradient */}
                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary-default/20 z-10" />
 

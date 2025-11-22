@@ -1,6 +1,8 @@
 import HeroContent from "./_components/home/hero/HeroContent";
 import TrustedBy from "./_components/home/trustedBy/TrustedBy";
 import WhatWeDo from "./_components/home/what we do/whatWeDo";
+import OurDifference from "./_components/home/ourDifference/OurDifference";
+import WhyChooseUs from "./_components/home/whyChooseUs/whyChooseUs";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
     <HeroContent  />
     <TrustedBy />
     <WhatWeDo />
+    <OurDifference />
+    <WhyChooseUs />
     </div>
   );
 }

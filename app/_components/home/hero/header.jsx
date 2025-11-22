@@ -26,7 +26,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-bold tracking-tighter text-dark-default dark:text-light-default group-hover:text-primary-default transition-colors">
+          <span className="text-2xl font-bold tracking-tighter text-dark-default dark:text-light-default group-hover:text-primary-default group-hover:rounded-full transition-colors">
             Kanour
           </span>
         </Link>
@@ -54,7 +54,7 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block px-6 py-2.5 rounded-full bg-primary-default hover:bg-primary-variant text-white font-medium text-sm transition-all active:scale-95 shadow-lg shadow-primary-default/20">
+          <button className="hidden sm:block px-6 py-3 rounded-full bg-primary-default hover:bg-primary-variant text-white font-medium text-sm transition-all active:scale-95 shadow-lg shadow-primary-default/20">
             Book a Call
           </button>
 

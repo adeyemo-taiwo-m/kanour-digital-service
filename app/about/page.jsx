@@ -1,4 +1,6 @@
 import OurIdentity from "../_components/about/OurIdentity/OurIdentity";
+import OurMission from "../_components/about/OurMission/OurMission";
+import OurVision from "../_components/about/OurVision/OurVision";
 
 export default function About() {
   return (
@@ -17,6 +19,8 @@ export default function About() {
 
       <div className="w-full pt-20">
         <OurIdentity />
+        <OurMission />
+        <OurVision />
       </div>
     </div>
   );

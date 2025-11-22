@@ -27,11 +27,11 @@ const differences = [
 
 export default function OurDifference() {
   return (
-    <section className="w-full py-24 bg-dark-default text-white relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] rounded-full bg-primary-default/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-primary-variant/20 blur-[120px]" />
+    <section className="w-full py-24 relative overflow-hidden">
+      {/* Background with Gradient */}
+      <div className="absolute inset-0 bg-dark-default z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-default/20 to-transparent opacity-50" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl bg-primary-default/10 blur-[100px] rounded-full pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

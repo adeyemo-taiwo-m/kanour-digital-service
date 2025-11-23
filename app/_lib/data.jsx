@@ -1,4 +1,10 @@
 import { HiChip, HiCode, HiCreditCard ,  HiLightningBolt,  HiChartBar } from "react-icons/hi";
+import { 
+  FaRobot, FaComments, FaChartLine, FaFileAlt, FaTools, 
+  FaMobileAlt, FaLaptopCode, FaTachometerAlt, FaNetworkWired, 
+  FaCloudUploadAlt, FaRocket, FaWallet, FaUserShield, 
+  FaCreditCard, FaLandmark, FaShieldAlt,  
+} from "react-icons/fa";
 
 export const reasons = [
   {
@@ -103,4 +109,50 @@ export const differences = [
       "Technology is a means to an end. We focus on delivering tangible business outcomes and measurable ROI.",
     icon: <HiChartBar className="w-10 h-10 text-primary-default" />,
   },
+];
+
+// Service categories
+
+
+export  const serviceCategories = [
+  {
+    title: "AI Automation & Intelligent Systems",
+    description: "Replace manual work with smart assistants and predictive insights.",
+    ctaText: "Book AI Automation Consultation",
+    ctaLink: "/contact",
+    services: [
+      { title: "AI Workflow Automation", description: "Replace manual, repetitive work with custom smart assistants.", icon: <FaRobot /> },
+      { title: "AI Customer Support", description: "Chatbots, response automation, and intelligent help desks.", icon: <FaComments/> },
+      { title: "Predictive Business Intelligence", description: "Sales, finance, and operations prediction and insights.", icon: <FaChartLine/> },
+      { title: "Document Automation", description: "OCR, document processing, verification modules.", icon: <FaFileAlt/> },
+      { title: "Internal AI Tools", description: "Custom tools to support your process: HR, ops, finance, logistics.", icon: <FaTools/> },
+    ]
+  },
+  {
+    title: "Software & Product Engineering",
+    description: "Build scalable, high-performance applications for web and mobile.",
+    ctaText: "Start a Software Project",
+    ctaLink: "/contact",
+    services: [
+      { title: "Mobile App Development", description: "Premium iOS/Android apps using React Native.", icon: <FaMobileAlt /> },
+      { title: "Web App Development", description: "Modern frontends + scalable backends (React + Node).", icon: <FaLaptopCode /> },
+      { title: "Enterprise Dashboards & Systems", description: "Operational dashboards, reporting tools, workflow systems.", icon: <FaTachometerAlt /> },
+      { title: "Internal Tools & Business Apps", description: "Mini-ERPs, inventory systems, staff management tools.", icon: <FaNetworkWired /> },
+      { title: "Cloud Modernization", description: "Migrating old systems into fast, reliable, modern architecture.", icon: <FaCloudUploadAlt /> },
+      { title: "MVP Engineering", description: "Speed + reliability for startup founders.", icon: <FaRocket /> },
+    ]
+  },
+  {
+    title: "FinTech Engineering",
+    description: "Secure, compliant, and innovative financial technology solutions.",
+    ctaText: "Talk to a FinTech Engineer",
+    ctaLink: "/contact",
+    services: [
+      { title: "Wallets & Payment Platforms", description: "Build or integrate secure wallet systems.", icon: <FaWallet /> },
+      { title: "KYC & Identity Systems", description: "Verification workflows, compliance modules.", icon: <FaUserShield /> },
+      { title: "Lending & Credit Systems", description: "Automated scoring, risk engines, loan management.", icon: <FaCreditCard /> },
+      { title: "Digital Banking Experiences", description: "Secure onboarding, account management, transaction analytics.", icon: <FaLandmark /> },
+      { title: "Fraud & Compliance Automation", description: "AI-driven fraud monitoring and risk systems.", icon: <FaShieldAlt /> },
+    ]
+  }
 ];

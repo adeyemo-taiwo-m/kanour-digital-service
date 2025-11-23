@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { FaBuilding, FaRocket, FaBrain, FaUserTie, FaHandshake, FaArrowRight } from "react-icons/fa";
+import Button from "@/app/_ui/Button";
 
 const features = [
   {
@@ -104,10 +104,11 @@ export default function WhatMakesUsDifferent() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <Link href="/portfolio" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary-default text-white font-semibold text-lg hover:bg-primary-variant transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary-default/25">
+          <div className="flex justify-center   w-full gap-2">
+          <Button type="primary">
             See What We Build
             <FaArrowRight className="w-4 h-4" />
-          </Link>
+          </Button></div>
         </motion.div>
 
       </div>

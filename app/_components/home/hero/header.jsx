@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Button from "@/app/_ui/Button";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,9 +55,9 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block px-6 py-3 rounded-full bg-primary-default hover:bg-primary-variant text-white font-medium text-sm transition-all active:scale-95 shadow-lg shadow-primary-default/20">
+          <Button type="primarySmall">
             Book a Call
-          </button>
+          </Button>
 
           {/* Mobile Menu Button */}
           <button className="lg:hidden p-2 text-foreground/80 hover:text-foreground">

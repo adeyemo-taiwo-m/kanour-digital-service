@@ -33,7 +33,7 @@ const MarqueeRow = ({ items, direction = "left", speed = 20 }) => {
               WebkitTextStroke: "1px rgba(var(--foreground), 0.2)",
             }}
           >
-            <span className="hover:text-primary-default text-light-default/90 hover:drop-shadow-[0_0_15px_rgba(var(--primary-default),0.5)] transition-all duration-300">
+            <span className="hover:text-primary-default text-light-default/70 hover:drop-shadow-[0_0_15px_rgba(var(--primary-default),0.5)] transition-all duration-300">
                 {item}
             </span>
             <span className="ml-8 md:ml-16 text-primary-default/20">•</span>

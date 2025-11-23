@@ -1,18 +1,19 @@
-import localFont from "next/font/local";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/home/hero/header";
 import CallToAction from "./_components/home/callToAction/CallToAction";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Kanour Digital Services",
@@ -22,8 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
           <Header />
         {children}
           <CallToAction />

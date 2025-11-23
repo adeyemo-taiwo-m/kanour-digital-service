@@ -1,10 +1,8 @@
 
 
-import ConsultationPackages from "../_components/pricing/ConsultationPackages";
-import ProjectPricing from "../_components/pricing/ProjectPricing";
-import PricingCTA from "../_components/pricing/PricingCTA";
+import ContactForm from "../_components/contact/ContactForm";
 
-export default function Pricing() {
+export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col justify-start items-center bg-background text-foreground relative overflow-hidden">
     
@@ -21,16 +19,16 @@ export default function Pricing() {
 
       <div className="w-full pt-32 pb-10 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold text-dark-default dark:text-light-default mb-6">
-          Transparent, <span className="text-primary-default">Outcome-Based</span> Pricing
+          Let’s Build Something <span className="text-primary-default">Intelligent</span>.
         </h1>
         <p className="text-xl text-dark-variant/70 dark:text-light-variant/70 max-w-2xl mx-auto">
-          Choose the right engagement model for your business. Whether you need strategic advice or full-scale engineering, we deliver value.
+          Tell us about your project. Our engineering team will respond within 24 hours.
         </p>
       </div>
 
-      <ConsultationPackages />
-      <ProjectPricing />
-      <PricingCTA />
+      <div className="w-full px-4 pb-20">
+        <ContactForm />
+      </div>
     </div>
   );
 }

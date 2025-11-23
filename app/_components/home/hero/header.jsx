@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "@/app/_ui/Button";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter  ();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-dark-variant/20 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-dark-variant/10 dark:border-light-variant/10 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md shadow-sm py-4"
           : "bg-transparent py-6"
@@ -55,7 +57,7 @@ export default function Header() {
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <Button type="primarySmall">
+          <Button onClick={() => router.push("https://calendly.com/adeyemotaiwom999/30min")}  type="primarySmall">
             Book a Call
           </Button>
 

@@ -28,7 +28,6 @@ export default function CallToAction() {
             <Link href="/contact">
               <Button 
                 variant="primary" 
-                className="!py-4 !px-8 !text-lg !rounded-full shadow-[0_0_20px_rgba(15,183,183,0.4)] hover:shadow-[0_0_30px_rgba(15,183,183,0.6)]"
               >
                 Start Your Project 
                 <HiArrowRight className="ml-2 w-5 h-5 inline-block" />

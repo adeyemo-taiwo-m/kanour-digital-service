@@ -4,6 +4,7 @@ import React from "react";
 import Button from "@/app/_ui/Button";
 import WhyChooseUsCard from "./WhyChooseUsCard";
 import Heading from "@/app/_ui/Heading";
+import Link from "next/link";
 import { reasons } from "@/app/_lib/data";
 import {  HiArrowRight } from "react-icons/hi";
 
@@ -20,12 +21,13 @@ export default function WhyChooseUs() {
             <p className="text-xl text-dark-variant/80 dark:text-light-variant/80 mb-8 font-light">
               Engineering quality that delivers results — not excuses.
             </p>
-            
+            <Link href="/services">
             <Button type="tertiary" 
             >
               Explore Our Services 
               <HiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </Link>
           </div>
 
           {/* Right Side: Grid */}

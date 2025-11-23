@@ -3,7 +3,6 @@ import TrustedBy from "./_components/home/trustedBy/TrustedBy";
 import WhatWeDo from "./_components/home/what we do/whatWeDo";
 import OurDifference from "./_components/home/ourDifference/OurDifference";
 import WhyChooseUs from "./_components/home/whyChooseUs/whyChooseUs";
-import CallToAction from "./_components/home/callToAction/CallToAction";
 
 export default function Home() {
   return (
@@ -25,7 +24,7 @@ export default function Home() {
     <WhatWeDo />
     <OurDifference />
     <WhyChooseUs />
-    <CallToAction />
+  
     </div>
   );
 }

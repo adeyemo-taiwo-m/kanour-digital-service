@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/home/hero/header";
+import CallToAction from "./_components/home/callToAction/CallToAction";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
 
           <Header />
         {children}
+          <CallToAction />
       </body>
     </html>
   );

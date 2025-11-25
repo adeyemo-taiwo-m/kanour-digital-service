@@ -2,6 +2,8 @@
 
 import ContactForm from "../_components/contact/ContactForm";
 
+import ScrollAnimation from "../_ui/ScrollAnimation";
+
 export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col justify-start items-center bg-background text-foreground relative overflow-hidden">
@@ -18,12 +20,16 @@ export default function Contact() {
       </div>
 
       <div className="w-full pt-32 pb-10 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-dark-default dark:text-light-default mb-6">
-          Let’s Build Something <span className="text-primary-default">Intelligent</span>.
-        </h1>
-        <p className="text-xl text-dark-variant/70 dark:text-light-variant/70 max-w-2xl mx-auto">
-          Tell us about your project. Our engineering team will respond within 24 hours.
-        </p>
+        <ScrollAnimation>
+          <h1 className="text-4xl md:text-6xl font-bold text-dark-default dark:text-light-default mb-6">
+            Let’s Build Something <span className="text-primary-default">Intelligent</span>.
+          </h1>
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.2}>
+          <p className="text-xl text-dark-variant/70 dark:text-light-variant/70 max-w-2xl mx-auto">
+            Tell us about your project. Our engineering team will respond within 24 hours.
+          </p>
+        </ScrollAnimation>
       </div>
 
       <div className="w-full px-4 pb-20">

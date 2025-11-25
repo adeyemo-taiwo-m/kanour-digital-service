@@ -1,8 +1,10 @@
 import HeroContent from "./_components/home/hero/HeroContent";
 import TrustedBy from "./_components/home/trustedBy/TrustedBy";
 import WhatWeDo from "./_components/home/what we do/whatWeDo";
+import Portfolio from "./_components/home/Portfolio/Portfolio";
 import OurDifference from "./_components/home/ourDifference/OurDifference";
 import WhyChooseUs from "./_components/home/whyChooseUs/whyChooseUs";
+import ScrollAnimation from "./_ui/ScrollAnimation";
 
 export default function Home() {
   return (
@@ -19,11 +21,12 @@ export default function Home() {
         <div className="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] rounded-full bg-primary-default/5 blur-[100px]" />
       </div>
 
-    <HeroContent  />
-    <TrustedBy />
-    <WhatWeDo />
-    <OurDifference />
-    <WhyChooseUs />
+      <HeroContent />
+      <TrustedBy />
+      <WhatWeDo />
+      <Portfolio />
+      <OurDifference />
+      <WhyChooseUs />
   
     </div>
   );

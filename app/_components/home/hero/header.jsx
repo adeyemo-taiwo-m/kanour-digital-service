@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Button from "@/app/_ui/Button";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +39,14 @@ export default function Header() {
 
   const navItems = ["Home", "About", "Services", "Pricing", "Contact"];
 
+  const isActive = (item) => {
+    const path = `/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`;
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(path);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-dark-variant/10 dark:border-light-variant/10 ${
@@ -60,14 +69,15 @@ export default function Header() {
             <Link
               key={item}
               href={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-              className="
+              className={`
                 text-sm font-medium 
-                text-dark-variant/80 dark:text-light-variant/80
                 px-3 py-1.5 rounded-md
-                hover:bg-dark-variant/10 dark:hover:bg-light-variant/10
-                hover:text-primary-default
                 transition-all
-              "
+                ${isActive(item) 
+                  ? "text-primary-default bg-primary-default/10" 
+                  : "text-dark-variant/80 dark:text-light-variant/80 hover:bg-dark-variant/10 dark:hover:bg-light-variant/10 hover:text-primary-default"
+                }
+              `}
             >
               {item}
             </Link>
@@ -119,7 +129,13 @@ export default function Header() {
                 <Link
                   key={item}
                   href={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-                  className="text-lg font-medium text-dark-default dark:text-light-default py-2 border-b border-dark-variant/5 dark:border-light-variant/5 last:border-0 hover:text-primary-default transition-colors"
+                  className={`
+                    text-lg font-medium py-2 border-b border-dark-variant/5 dark:border-light-variant/5 last:border-0 transition-colors
+                    ${isActive(item)
+                      ? "text-primary-default"
+                      : "text-dark-default dark:text-light-default hover:text-primary-default"
+                    }
+                  `}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}

@@ -3,7 +3,7 @@ import {
   FaRobot, FaComments, FaChartLine, FaFileAlt, FaTools, 
   FaMobileAlt, FaLaptopCode, FaTachometerAlt, FaNetworkWired, 
   FaCloudUploadAlt, FaRocket, FaWallet, FaUserShield, 
-  FaCreditCard, FaLandmark, FaShieldAlt,  
+  FaCreditCard, FaLandmark, FaShieldAlt,   FaLinkedinIn, FaTwitter, FaInstagram, FaCode, FaUserTie, FaCogs 
 } from "react-icons/fa";
 
 export const reasons = [
@@ -155,4 +155,115 @@ export  const serviceCategories = [
       { title: "Fraud & Compliance Automation", description: "AI-driven fraud monitoring and risk systems.", icon: <FaShieldAlt /> },
     ]
   }
+];
+
+export const socials = [
+  {
+    icon: FaLinkedinIn ,
+    link: "https://www.linkedin.com/in/oluwapelumi-olamilekan-289a92222",
+  },
+  {
+    icon: FaTwitter,
+    link: "https://x.com/olami_js",
+  },
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/olami_js?",
+  },
+];
+
+export const trustPoints = [
+  {
+    icon: FaShieldAlt,
+    title: "Parent-Company Credibility",
+    description: "Backed by the robust Kanour ecosystem, ensuring stability and long-term partnership.",
+  },
+  {
+    icon: FaCode,
+    title: "FinTech Engineering DNA",
+    description: "Deep expertise in building secure, high-performance financial technologies.",
+  },
+  {
+    icon: FaMobileAlt,
+    title: "45+ Screens Delivered",
+    description: "Extensive portfolio of intuitive, bank-level mobile and web applications.",
+  },
+  {
+    icon: FaCogs,
+    title: "Automation & Logic",
+    description: "Masters of complex dashboards, smart system logic, and workflow automation.",
+  },
+  {
+    icon: FaUserTie,
+    title: "Strong Leadership",
+    description: "Led by experienced engineers with a track record of real hands-on delivery.",
+  },
+  {
+    icon: FaRocket,
+    title: "Modern Tech Stack",
+    description: "Expertise across React Native, React, Node.js, and cutting-edge AI integration.",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    category: "E-Commerce",
+    description:
+      "Modern e-commerce platform with advanced filtering, cart management, and payment integration.",
+    tags: ["React", "TypeScript", "TailwindCSS", "Redux"],
+    color: "bg-blue-600",
+    gradient: "from-blue-600 to-blue-900",
+  },
+  {
+    id: 2,
+    title: "Dashboard Analytics",
+    category: "Analytics",
+    description:
+      "Real-time analytics dashboard with interactive charts and data visualization.",
+    tags: ["Next.js", "TypeScript", "Recharts"],
+    color: "bg-emerald-600",
+    gradient: "from-emerald-600 to-emerald-900",
+  },
+  {
+    id: 3,
+    title: "RESTful API Service",
+    category: "API",
+    description:
+      "Scalable REST API with authentication, rate limiting, and comprehensive documentation.",
+    tags: ["Node.js", "Express", "MongoDB", "JWT"],
+    color: "bg-orange-600",
+    gradient: "from-orange-600 to-orange-900",
+  },
+  {
+    id: 4,
+    title: "AI Chatbot Assistant",
+    category: "AI",
+    description:
+      "Intelligent chatbot powered by machine learning with natural language processing.",
+    tags: ["Python", "OpenAI", "LangChain", "FastAPI"],
+    color: "bg-purple-600",
+    gradient: "from-purple-600 to-purple-900",
+  },
+  {
+    id: 5,
+    title: "Logistics Tracking",
+    category: "Logistics",
+    description:
+      "Real-time logistics and delivery tracking system with GPS integration.",
+    tags: ["React Native", "Node.js", "PostgreSQL", "Maps API"],
+    color: "bg-amber-600",
+    gradient: "from-amber-600 to-amber-900",
+  },
+  {
+    id: 6,
+    title: "Classroom Booking App",
+    category: "Education",
+    description:
+      "Streamlined classroom reservation system for educational institutions.",
+    tags: ["React", "Node.js", "MongoDB", "Socket.io"],
+    color: "bg-indigo-600",
+    gradient: "from-indigo-600 to-indigo-900",
+  },
 ];

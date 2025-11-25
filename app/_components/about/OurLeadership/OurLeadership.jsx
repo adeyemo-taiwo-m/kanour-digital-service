@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ceoImage from "@/public/images/ceo-image.jpg";
-import { FaLinkedinIn, FaTwitter, FaEnvelope, FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
+import { socials } from "@/app/_lib/data";
+import Link from "next/link";
 
 export default function OurLeadership() {
   return (
@@ -40,7 +42,7 @@ export default function OurLeadership() {
             <div className="pt-8 border-t border-white/10 mt-4">
               <div className="flex flex-col gap-2">
                 <h3 className="text-2xl font-bold text-foreground">
-                  Olamilekan Emmanuel
+                  Oluwapelumi Olamilekan
                 </h3>
                 <p className="text-primary-default text-sm font-medium tracking-wide uppercase">
                   Chief Executive Officer
@@ -48,14 +50,14 @@ export default function OurLeadership() {
               </div>
               
               <div className="flex gap-4 mt-6">
-                {[FaLinkedinIn, FaTwitter, FaEnvelope].map((Icon, i) => (
-                  <a 
+                {socials.map((social, i) => (
+                  <Link   
                     key={i} 
-                    href="#" 
+                    href={social.link} 
                     className="p-3 rounded-full bg-white/5 text-foreground hover:bg-primary-default hover:text-white transition-all duration-300 hover:-translate-y-1"
                   >
-                    <Icon className="w-5 h-5" />
-                  </a>
+                    <social.icon className="w-5 h-5" />
+                  </Link>
                 ))}
               </div>
             </div>

@@ -1,6 +1,7 @@
 import OurIdentity from "../_components/about/OurIdentity/OurIdentity";
 import OurMission from "../_components/about/OurMission/OurMission";
 import OurVision from "../_components/about/OurVision/OurVision";
+import WhyTrustUs from "../_components/about/WhyTrustUs/WhyTrustUs";
 import OurPhilosophy from "../_components/about/OurPhilosophy/OurPhilosophy";
 import OurCoreValues from "../_components/about/OurCoreValues/OurCoreValues";
 import OurLeadership from "../_components/about/OurLeadership/OurLeadership";
@@ -25,6 +26,7 @@ export default function About() {
         <OurIdentity />
         <OurMission />
         <OurVision />
+        <WhyTrustUs />
         <OurPhilosophy />
         <OurCoreValues />
         <OurLeadership />

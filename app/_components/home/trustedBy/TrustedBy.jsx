@@ -11,13 +11,17 @@ const logos = [
   { name: "Global Systems", color: "#3B82F6" },
 ];
 
+import ScrollAnimation from "@/app/_ui/ScrollAnimation";
+
 export default function TrustedBy() {
   return (
     <section className="w-full py-12 overflow-hidden bg-background border-y border-light-variant/5 dark:border-dark-variant/5">
       <div className="container mx-auto px-4 mb-8 text-center">
-        <p className="text-sm font-semibold uppercase tracking-wider text-dark-variant/50 dark:text-light-variant/50">
-          Trusted by innovative companies worldwide
-        </p>
+        <ScrollAnimation>
+          <p className="text-sm font-semibold uppercase tracking-wider text-dark-variant/50 dark:text-light-variant/50">
+            Trusted by innovative companies worldwide
+          </p>
+        </ScrollAnimation>
       </div>
 
       <div className="relative flex w-full overflow-hidden mask-gradient">

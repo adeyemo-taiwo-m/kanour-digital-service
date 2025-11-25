@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { FaBuilding, FaRocket, FaBrain, FaUserTie, FaHandshake, FaArrowRight } from "react-icons/fa";
 import Button from "@/app/_ui/Button";
@@ -38,6 +39,8 @@ const features = [
 ];
 
 export default function WhatMakesUsDifferent() {
+  const router = useRouter();
+
   return (
     <section className="relative w-full py-20 lg:py-32 overflow-hidden bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -104,11 +107,12 @@ export default function WhatMakesUsDifferent() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <div className="flex justify-center   w-full gap-2">
-          <Button type="primary">
-            See What We Build
-            <FaArrowRight className="w-4 h-4" />
-          </Button></div>
+          <div className="flex justify-center w-full gap-2">
+            <Button type="primary" onClick={() => router.push('/#portfolio')}>
+              See What We Build
+              <FaArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </motion.div>
 
       </div>

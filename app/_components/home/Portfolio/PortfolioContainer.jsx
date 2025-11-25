@@ -1,6 +1,7 @@
 import Button from "@/app/_ui/Button";
 import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PortfolioContainer({ project }) {
     return (
@@ -83,7 +84,7 @@ export default function PortfolioContainer({ project }) {
                         </Button>
                         
                         {project.liveURL && (
-                             <a 
+                             <Link
                                 href={project.liveURL} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
@@ -91,7 +92,7 @@ export default function PortfolioContainer({ project }) {
                             >
                                 Live Demo 
                                 <FaExternalLinkAlt className="w-3 h-3 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" />
-                            </a>
+                            </Link>
                         )}
                     </div>
                 </div>

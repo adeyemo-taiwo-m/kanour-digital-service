@@ -213,6 +213,10 @@ export const projects = [
     description:
       "Modern e-commerce platform with advanced filtering, cart management, and payment integration.",
     tags: ["React", "TypeScript", "TailwindCSS", "Redux"],
+    imageURL:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-blue-600",
     gradient: "from-blue-600 to-blue-900",
   },
@@ -223,6 +227,10 @@ export const projects = [
     description:
       "Real-time analytics dashboard with interactive charts and data visualization.",
     tags: ["Next.js", "TypeScript", "Recharts"],
+    imageURL:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-emerald-600",
     gradient: "from-emerald-600 to-emerald-900",
   },
@@ -233,6 +241,10 @@ export const projects = [
     description:
       "Scalable REST API with authentication, rate limiting, and comprehensive documentation.",
     tags: ["Node.js", "Express", "MongoDB", "JWT"],
+    imageURL:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-orange-600",
     gradient: "from-orange-600 to-orange-900",
   },
@@ -243,6 +255,10 @@ export const projects = [
     description:
       "Intelligent chatbot powered by machine learning with natural language processing.",
     tags: ["Python", "OpenAI", "LangChain", "FastAPI"],
+    imageURL:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-purple-600",
     gradient: "from-purple-600 to-purple-900",
   },
@@ -253,6 +269,10 @@ export const projects = [
     description:
       "Real-time logistics and delivery tracking system with GPS integration.",
     tags: ["React Native", "Node.js", "PostgreSQL", "Maps API"],
+    imageURL:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-amber-600",
     gradient: "from-amber-600 to-amber-900",
   },
@@ -263,6 +283,10 @@ export const projects = [
     description:
       "Streamlined classroom reservation system for educational institutions.",
     tags: ["React", "Node.js", "MongoDB", "Socket.io"],
+    imageURL:
+      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=500&fit=crop",
+    liveURL: "https://concavo-demo.vercel.app",
+    codeURL: "https://github.com/yourusername/concavo-banking-app",
     color: "bg-indigo-600",
     gradient: "from-indigo-600 to-indigo-900",
   },

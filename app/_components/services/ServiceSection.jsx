@@ -11,11 +11,14 @@ export default function ServiceSection() {
   return (
     <div className="w-full bg-background">
       {serviceCategories.map((category, categoryIndex) => (
-        <section key={categoryIndex} className="py-20 border-b border-gray-100 dark:border-gray-800 last:border-0">
+        <section
+          key={categoryIndex}
+          className="py-20 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category Header */}
             <div className="mb-12 md:mb-16 max-w-3xl">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -24,7 +27,7 @@ export default function ServiceSection() {
               >
                 {category.title}
               </motion.h2>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -64,18 +67,33 @@ export default function ServiceSection() {
             </div>
 
             {/* Category CTA */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Link href={category.ctaLink}>
-                <Button type="primary" >
+              {category.ctaText === "Start a Software Project" ? (
+                <Link href={category.ctaLink}>
+                  <Button type="primary">
+                    {category.ctaText}
+                    <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  type="primary"
+                  onClick={() =>
+                    window.open(
+                      "https://calendly.com/adeyemotaiwom999/30min",
+                      "_blank"
+                    )
+                  }
+                >
                   {category.ctaText}
                   <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              )}
             </motion.div>
           </div>
         </section>

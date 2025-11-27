@@ -4,26 +4,15 @@ import React, { useState } from "react";
 import Button from "@/app/_ui/Button";
 import { FaPaperPlane } from "react-icons/fa";
 import ScrollAnimation from "@/app/_ui/ScrollAnimation";
+import Toast from "@/app/_ui/Toast";
+import { send } from "@emailjs/browser";
 
-const projectTypes = [
-  "AI Automation & Integration",
-  "Web Application Development",
-  "Mobile App Development",
-  "FinTech Solution",
-  "Enterprise System",
-  "Consultation / Advisory",
-  "Other",
-];
-
-const budgetRanges = [
-  "$5k - $10k",
-  "$10k - $25k",
-  "$25k - $50k",
-  "$50k - $100k",
-  "$100k+",
-];
-
-export default function BookingForm() {
+export default function BookingForm({ onClose }) {
+  const [toast, setToast] = useState({
+    show: false,
+    message: "",
+    type: "success",
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,8 +28,36 @@ export default function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log("Form submitted:", formData);
+    const serviceID = "service_5znnigg";
+    const templateID = "template_ecz2nrr";
+    const publicKey = "PR4BYMprY_gY4sfDB";
+
+    send(serviceID, templateID, formData, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        setToast({
+          show: true,
+          message: "Booking submitted! We'll get back to you soon.",
+          type: "success",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          communicationMethod: "",
+          message: "",
+        });
+        onClose();
+      })
+      .catch((err) => {
+        console.error("Failed to send email:", err);
+        setToast({
+          show: true,
+          message: "Failed to send booking. Please try again later.",
+          type: "error",
+        });
+      });
   };
 
   const inputClasses =
@@ -159,6 +176,12 @@ export default function BookingForm() {
           </Button>
         </ScrollAnimation>
       </form>
+
+      <Toast
+        message={toast.show ? toast.message : ""}
+        type={toast.type}
+        onClose={() => setToast({ ...toast, show: false })}
+      />
     </div>
   );
 }

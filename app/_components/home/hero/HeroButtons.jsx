@@ -23,7 +23,7 @@ export default function HeroButtons() {
 
       <div>
         <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-          <BookingForm />
+          <BookingForm onClose={() => setOpenModal(false)} />
         </Modal>
       </div>
     </>

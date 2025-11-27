@@ -25,7 +25,8 @@ const projects = [
     title: "FinTech Engineering",
     priceRange: "$30,000 – $200,000",
     unit: "depending on modules",
-    description: "Secure, compliant financial systems and payment integrations.",
+    description:
+      "Secure, compliant financial systems and payment integrations.",
     icon: <FaCreditCard className="w-8 h-8 text-white" />,
     gradient: "from-primary-default to-primary-variant",
   },
@@ -55,19 +56,23 @@ export default function ProjectPricing() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-2xl bg-white dark:bg-dark-default shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800"
+              className="group relative overflow-hidden rounded-2xl bg-white dark:bg-dark-default shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100 dark:border-gray-800"
             >
-              <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${project.gradient}`} />
-              
+              <div
+                className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${project.gradient}`}
+              />
+
               <div className="p-8">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 transition-transform duration-300`}
+                >
                   {project.icon}
                 </div>
 
                 <h3 className="text-2xl font-bold text-dark-default dark:text-light-default mb-2">
                   {project.title}
                 </h3>
-                
+
                 <div className="my-6">
                   <p className="text-2xl font-bold text-primary-default">
                     {project.priceRange}

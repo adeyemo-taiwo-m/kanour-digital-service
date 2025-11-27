@@ -10,7 +10,7 @@ export default function PricingCTA() {
   return (
     <section className="py-20 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -28,15 +28,17 @@ export default function PricingCTA() {
               Need a custom solution?
             </h2>
             <p className="text-xl text-gray-300 mb-10 font-light">
-              Every business is unique. Let's discuss your specific requirements and build a plan that fits your budget and goals.
+              Every business is unique. Let's discuss your specific requirements
+              and build a plan that fits your budget and goals.
             </p>
             <div className="w-full flex justify-center">
-              <Button 
-                type="primary" 
-              >
-                Get an Exact Quote
-                <FaArrowRight className="ml-2 w-5 h-5 inline-block" />
-              </Button></div>
+              <Link href="/contact">
+                <Button type="primary">
+                  Get an Exact Quote
+                  <FaArrowRight className="ml-2 w-5 h-5 inline-block" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

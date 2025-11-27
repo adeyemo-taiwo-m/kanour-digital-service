@@ -12,7 +12,7 @@ import { projects } from "@/app/_lib/data";
 export default function Portfolio() {
   return (
     <section id="portfolio" className="w-full relative bg-background py-20">
-      <div className="container mx-auto px-4 mb-10 text-center">
+      <div className="container mx-auto px-4  text-center">
         <Heading type="h2" className="mb-4">
           Featured <span className="text-primary-default">Projects</span>
         </Heading>
@@ -21,7 +21,7 @@ export default function Portfolio() {
         </p>
       </div>
 
-      <div className="min-h-[250vh] w-full">
+      <div className=" w-full">
         <ScrollStack useWindowScroll={true} itemDistance={100} itemStackDistance={50}>
           {projects.map((project) => (
             <ScrollStackItem key={project.id} itemClassName="bg-white dark:bg-dark-variant/10 border border-gray-200 dark:border-white/10 backdrop-blur-xl !p-0 overflow-hidden group">

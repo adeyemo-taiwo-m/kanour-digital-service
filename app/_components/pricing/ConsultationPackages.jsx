@@ -11,34 +11,68 @@ const packages = [
     title: "Tech Strategy Session",
     price: "$150",
     period: "/session",
-    description: "One-hour deep dive into your technical challenges and roadmap.",
-    features: ["1-hour video call", "Architecture review", "Stack recommendations", "Written summary"],
+    description:
+      "One-hour deep dive into your technical challenges and roadmap.",
+    features: [
+      "1-hour video call",
+      "Architecture review",
+      "Stack recommendations",
+      "Written summary",
+    ],
   },
   {
     title: "AI Automation Consultation",
     price: "$300",
     period: "/session",
-    description: "Identify high-impact automation opportunities for your business.",
-    features: ["Workflow analysis", "Tool selection", "ROI estimation", "Implementation roadmap"],
+    description:
+      "Identify high-impact automation opportunities for your business.",
+    features: [
+      "Workflow analysis",
+      "Tool selection",
+      "ROI estimation",
+      "Implementation roadmap",
+    ],
     highlight: true,
   },
   {
     title: "Startup Tech Advisory",
     price: "$500",
     period: "/month",
-    description: "Ongoing guidance for non-technical founders building tech products.",
-    features: ["Weekly check-ins", "Vendor vetting", "Hiring support", "Technical oversight"],
+    description:
+      "Ongoing guidance for non-technical founders building tech products.",
+    features: [
+      "Weekly check-ins",
+      "Vendor vetting",
+      "Hiring support",
+      "Technical oversight",
+    ],
   },
   {
     title: "CTO-as-a-Service",
     price: "$1,000",
     period: "/month",
     description: "Fractional CTO leadership for growing teams.",
-    features: ["Strategic leadership", "Team management", "Code reviews", "Infrastructure planning"],
+    features: [
+      "Strategic leadership",
+      "Team management",
+      "Code reviews",
+      "Infrastructure planning",
+    ],
   },
 ];
 
 export default function ConsultationPackages() {
+  function handleBookNowClick(pkg) {
+    const message = `Hello, I'm interested in the *${pkg.title}* package (${
+      pkg.price
+    }${pkg.period}).\n\nDescription: ${
+      pkg.description
+    }\n\nFeatures:\n${pkg.features
+      .map((f) => `- ${f}`)
+      .join("\n")}\n\nI'd like to proceed with booking.`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  }
   return (
     <section className="py-20 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,8 +95,8 @@ export default function ConsultationPackages() {
               viewport={{ once: true }}
               className={`relative p-6 rounded-2xl border transition-all duration-300 flex flex-col ${
                 pkg.highlight
-                  ? "bg-primary-default/5 border-primary-default shadow-lg shadow-primary-default/10 scale-105 z-10"
-                  : "bg-white dark:bg-dark-variant/5 border-gray-200 dark:border-gray-800 hover:border-primary-default/30 hover:shadow-md"
+                  ? "bg-primary-default/5 border-primary-default shadow-lg shadow-primary-default/10 scale-105 hover:scale-110 z-10"
+                  : "bg-white dark:bg-dark-variant/5 border-gray-200 dark:border-gray-800 hover:border-primary-default/30 hover:shadow-md hover:scale-105"
               }`}
             >
               {pkg.highlight && (
@@ -70,14 +104,18 @@ export default function ConsultationPackages() {
                   Popular
                 </div>
               )}
-              
+
               <div className="mb-6">
                 <h3 className="text-lg font-bold text-dark-default dark:text-light-default mb-2">
                   {pkg.title}
                 </h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-primary-default">{pkg.price}</span>
-                  <span className="text-sm text-dark-variant/60 dark:text-light-variant/60">{pkg.period}</span>
+                  <span className="text-3xl font-bold text-primary-default">
+                    {pkg.price}
+                  </span>
+                  <span className="text-sm text-dark-variant/60 dark:text-light-variant/60">
+                    {pkg.period}
+                  </span>
                 </div>
                 <p className="mt-4 text-sm text-dark-variant/70 dark:text-light-variant/70 leading-relaxed min-h-[60px]">
                   {pkg.description}
@@ -86,7 +124,10 @@ export default function ConsultationPackages() {
 
               <ul className="space-y-3 mb-8 flex-grow">
                 {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-dark-variant/80 dark:text-light-variant/80">
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-sm text-dark-variant/80 dark:text-light-variant/80"
+                  >
                     <FaCheck className="w-4 h-4 text-primary-default flex-shrink-0 mt-0.5" />
                     <span>{feature}</span>
                   </li>
@@ -94,14 +135,15 @@ export default function ConsultationPackages() {
               </ul>
 
               <div className="mt-auto">
-                <Link href="/contact" className="w-full block">
-                  <Button 
-                    type={pkg.highlight ? "primarySmall" : "secondarySmall"} 
-                    className="w-full justify-center"
-                  >
-                    Book Now
-                  </Button>
-                </Link>
+                <Button
+                  type={pkg.highlight ? "primarySmall" : "secondarySmall"}
+                  className="w-full justify-center"
+                  onClick={() => {
+                    handleBookNowClick(pkg);
+                  }}
+                >
+                  Book Now
+                </Button>
               </div>
             </motion.div>
           ))}

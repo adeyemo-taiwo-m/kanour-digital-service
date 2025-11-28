@@ -8,18 +8,13 @@ import ScrollAnimation from "./_ui/ScrollAnimation";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-start items-center bg-background text-foreground relative overflow-hidden">
-    
-
-
+    <div className="min-h-screen flex flex-col justify-start items-center  text-foreground relative overflow-hidden">
       <HeroContent />
       <TrustedBy />
       <WhatWeDo />
       <Portfolio />
       <OurDifference />
       <WhyChooseUs />
-  
     </div>
   );
 }
-

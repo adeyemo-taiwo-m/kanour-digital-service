@@ -265,14 +265,17 @@ export const socials = [
   {
     icon: FaLinkedinIn,
     link: "https://www.linkedin.com/in/oluwapelumi-olamilekan-289a92222",
+    label: "Linkedln",
   },
   {
     icon: FaTwitter,
     link: "https://x.com/olami_js",
+    label: "Twitter",
   },
   {
     icon: FaInstagram,
     link: "https://www.instagram.com/olami_js?",
+    label: "Instagram",
   },
 ];
 

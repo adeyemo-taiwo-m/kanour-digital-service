@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "./_components/home/hero/header";
 import CallToAction from "./_components/home/callToAction/CallToAction";
+import Footer from "./_components/layout/Footer";
 import ThemeToggle from "./_ui/ThemeToggle";
 
 const inter = Inter({
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <CallToAction />
+          <Footer />
           <ThemeToggle />
         </ThemeProvider>
       </body>
